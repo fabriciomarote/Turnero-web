@@ -2,7 +2,6 @@ import React, { useState }  from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineSearch } from "react-icons/ai";
 import logo from '../logo2.png';
-import Navbar from '../components/Navbar';
 import Loading from '../components/Loading';
 import '../styles/Home.css';
 
@@ -43,13 +42,10 @@ const Home = () => {
     if (!loading) {
         return (
         <>
-            <div className="navbar">
-                <Navbar/>
-            </div> 
             <div className="home-container">
                 <div className="box-container">
-                    <div className='logo-home'>
-                        <img src={logo} alt="logo" height="200" width="400"/>
+                    <div>
+                        <img className='logo-home' src={logo} alt="logo"/>
                     </div>
                     <div className="search-content">  
                         <div className='search-bar'>
@@ -70,7 +66,7 @@ const Home = () => {
                 </div>  
             </div>
             <div className='footer'>
-            <span className="copyleft">&copy;</span>{ new Date().getFullYear() }{" | Desarrollado para Elementos de Ingeniería de Software, UNQ."}
+                <span className="copyleft">&copy;</span>{ new Date().getFullYear() }{" | Desarrollado para Elementos de Ingeniería de Software, UNQ."}
             </div>  
         </>  
         );
@@ -78,15 +74,13 @@ const Home = () => {
         return ( 
             <>
                <div className="home-loading">
-                    <Navbar/>
                     <div className='loading'>
                         <Loading/>
                     </div>
                </div>
-            </>
-            
+            </> 
         )
     }
 }
   
-  export default Home;
+export default Home;

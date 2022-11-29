@@ -15,7 +15,7 @@ const TurnoModel = (props) => {
           <div className='card-turno'>
             <p className="value-turno" id="codigo"><strong>Codigo:</strong> {turno.id}</p> 
             <p className="value-turno" id="especialidad"><strong>Especialidad:</strong> {turno.especialidad}</p>
-            <p className="value-turno"><strong>Profesional:</strong> {turno.especialista}</p>
+            <p className="value-turno" id="especialista"><strong>Profesional:</strong> {turno.especialista}</p>
             <p className="value-turno"><strong>Fecha y Hora:</strong> {turno.fechaYHora}</p>
             <p className="value-turno"><strong>Hospital:</strong> {turno.nombreHospital}</p>  
             <ContenedorBotones>

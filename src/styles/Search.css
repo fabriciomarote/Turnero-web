@@ -28,3 +28,13 @@
     align-items: center;
     grid-template-columns: repeat(5, 1fr);
 }
+
+@media (max-width:600px) {
+    .box-result {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  

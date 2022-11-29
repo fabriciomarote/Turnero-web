@@ -91,6 +91,7 @@ export default DarDebaja;
     justify-content: center;
     padding: 30px;
     font-weight: 500;
+    line-height:20px;
     font-size: 16px;
     color: white(0,0,0);
     text-indent: 0px;

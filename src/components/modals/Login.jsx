@@ -52,8 +52,8 @@ const Login = ({state, setState, setStateRegister }) => {
                     <div className='modalForm'>
                         <form className='formModal' onSubmit={handleSubmit}>
                             <div className='modal-inputs'>
-                                <input className="form-input-register" type='text' name="email" value={data.email} onChange={handleChange("email")} placeholder="Email" required  ></input>
-                                <input className="form-input-register" type='password' name="password" value={data.password} onChange={handleChange("password")} placeholder="Contraseña" required></input> 
+                                <input className="form-input-login" type='text' name="email" value={data.email} onChange={handleChange("email")} placeholder="Email" required  ></input>
+                                <input className="form-input-login" type='password' name="password" value={data.password} onChange={handleChange("password")} placeholder="Contraseña" required></input> 
                             </div>
                             { loginError && (<div id='alert-login' className="alert alert-danger" role="alert">{loginErrorName}</div>) }
                             <button type="submit" className="btn-info b-log">INICIAR SESIÓN</button>
@@ -151,5 +151,11 @@ export default Login;
   transition: .3s ease all;
   &:hover {
     color: #26B5A8;
+  }
+  @media (max-width:600px) {
+      height: 30px;
+      width: 120px;
+      font-size: 14px;
+      margin-bottom: 8px;
   }
 `;

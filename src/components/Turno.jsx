@@ -45,18 +45,15 @@ const Turno = () => {
 
     return (
         <>
-            <div className="navbar">
-                <Navbar/>
-            </div> 
             <div className='turno-container'>
                 <div className="title-turno">
-                    <h1>Su turno ha sido confirmado</h1>
+                    <p>Su turno ha sido confirmado</p>
                 </div>
                 <div className="card-turno">
                     <div className="box-turno">
                         <div className="card-header">
                             <div className='header-left'>
-                                <h2> {turno.nombreHospital} </h2>
+                                <p className='name-hospital'> {turno.nombreHospital} </p>
                                 <p>{turno.direccionHospital}</p>
                             </div>
                             <div className='header-right'>

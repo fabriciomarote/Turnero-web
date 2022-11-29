@@ -21,6 +21,7 @@
   font-size: 15px;
   padding: 20px;
   color: rgb(255, 255, 255);
+  border-color: rgba(47, 47, 115, 0.742);
 }
 
 .card-notlogged {
@@ -38,6 +39,7 @@
   padding: 20px;
   border-color: #000152;
   color: rgb(255, 255, 255);
+  border-color: rgba(47, 47, 115, 0.742);
 }
 
 .select {
@@ -99,4 +101,35 @@ option {
 #alertSMS {
   font-size: 12px;
   margin-top: 5px;
+}
+
+@media (min-width: 1200px) {
+  .form-content {
+    width: 550px;
+    height: 400px;
+    font-size: 15px;
+    padding: 20px;
+  }
+}
+
+
+@media (max-width:600px) {
+  .formTurno-container{
+    margin-top: 70px;
+  }
+  .form-content {
+    width: 400px;
+    height: 350px;
+    font-weight: 900;
+    font-size: 13px;
+    padding: 40px;
+  }
+  .card-notlogged {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 20px;
+  }
 }

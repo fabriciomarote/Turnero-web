@@ -4,7 +4,7 @@
     align-items: center;
     text-align: center;
     color: #A9D35A;
-    height: 100vh;
+    height: 80vh;
 }
 
 #btn-invalid {
@@ -29,3 +29,18 @@
    width: 400px;
    height: 400px;
 }
+
+@media (max-width:600px) {
+    .invalid {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #A9D35A;
+        height: 90vh;
+    }
+    .error404 {
+        width: 300px;
+        height: 300px;
+     }
+  }

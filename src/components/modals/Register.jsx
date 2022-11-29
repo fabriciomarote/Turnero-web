@@ -70,7 +70,7 @@ const Register = ({state, setState, setStateLogin }) => {
                   </form>
                 </div>    
                 <div className='modalFooter-register'>
-                  ¿Ya sos usuario? <Boton onClick={() => { setState(false); setStateLogin(true)}}>Inicía Sesión</Boton>
+                  ¿Ya sos usuario? <Boton onClick={() => { setState(false); setStateLogin(true)}}>INICIA SESIÓN</Boton>
                 </div>
               </div>
             </Contenido>  
@@ -99,7 +99,7 @@ export default Register;
 
   const ContenedorModal = styled.div`
     width: 500px;
-    min-height: 100px;
+    height: 750px;
     background: rgba(24, 22, 80, 0.7);
     position: relative;
     display: grid;
@@ -108,6 +108,10 @@ export default Register;
     padding: 50px;
     transition: .3s ease all;
     animation: show 1s .5s;
+    @media (max-width:600px) {
+    width: 500px;
+    height: 600px;
+  }
   `;
 
   const EncabezadoModal = styled.div`
@@ -122,6 +126,9 @@ export default Register;
       font-size: 30px;
       color: #E8E8E8;
       text-indent: 0px;
+      @media (max-width:600px) {
+        font-size: 20px;
+      }
     }
   `;
 
@@ -164,4 +171,10 @@ export default Register;
     &:hover {
       color: #26B5A8;
     }
+    @media (max-width:600px) {
+      height: 30px;
+      width: 140px;
+      font-size: 14px;
+      margin-bottom: 8px;
+  }
   `;

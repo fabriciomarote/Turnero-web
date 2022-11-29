@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import Service from '../service/service';
-import Navbar from '../components/Navbar';
 import '../styles/FormTurno.css';
 
 const FormTurno = () => {
@@ -159,9 +158,6 @@ const FormTurno = () => {
 
     return (
         <>
-            <div className="navbar">
-                <Navbar/>
-            </div> 
             <div className="formTurno-container">
                 { isLogged 
                 ?

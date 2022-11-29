@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
 import Service from './../../service/service.js'
+import './../../styles/EditProfile.css';
 
 const EditarPerfil = ({user, setUser, state, setState}) => {
 
@@ -46,19 +47,18 @@ const EditarPerfil = ({user, setUser, state, setState}) => {
             </BotonCerrar> 
             <Contenido>
               <div>
-                <label>Nombre y Apellido</label>
-                <input type="text" className="form-input" value={user.nombreYApellido} onChange={handleChange("nombreYApellido")}/>
+                <label className='name-user'>Nombre y Apellido</label>
+                <input type="text" className="form-input-edit" value={user.nombreYApellido} onChange={handleChange("nombreYApellido")}/>
                 <label>Imagen</label>
-                <input type="text" className="form-input" value={user.image} onChange={handleChange("image")}/>
-                <input type="file" className="form-input2" onChange={handleChangeImage("image")}/>
+                <input type="text" className="form-input-edit" value={user.image} onChange={handleChange("image")}/>
                 <label>Email</label>
-                <input type="text" className="form-input" value={user.email} onChange={handleChange("email")}/>
+                <input type="text" className="form-input-edit" value={user.email} onChange={handleChange("email")}/>
                 <label>Telefono</label>
-                <input type="text" className="form-input" value={user.telefono} onChange={handleChange("telefono")}/>
+                <input type="text" className="form-input-edit" value={user.telefono} onChange={handleChange("telefono")}/>
                 <label>Contraseña</label>
-                <input type="password" className="form-input" value={user.password} onChange={handleChange("password")}/>
+                <input type="password" className="form-input-edit" value={user.password} onChange={handleChange("password")}/>
                 <div align="center">
-                  { editError && (<div id='alert-login' className="alert alert-danger" role="alert">{editErrorName}</div>) }
+                  { editError && (<div id='alert-edit' className="alert alert-danger" role="alert">{editErrorName}</div>) }
                 </div>
               </div>
               <BotonesConfirmacion>
@@ -97,6 +97,10 @@ export default EditarPerfil;
     box-shadow: rgba(100,100,11, 0.2) 0px 7px 29px 0px;
     padding: 20px;
     padding-left: 40px;
+    @media (max-width:600px) {
+      height: 550px;
+      width: 500px;
+    }
   `;
 
   const EncabezadoModal = styled.div`
@@ -111,6 +115,10 @@ export default EditarPerfil;
       font-size: 28px;
       color: white(0,0,0);
       text-indent: 0px;
+      @media (max-width:600px) {
+        font-weight: 700;
+        font-size: 20px;
+    }
     }
   `;
 
@@ -128,12 +136,16 @@ export default EditarPerfil;
     color:black;
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
-    font-weight: 900;
+    font-weight: 700;
     transition: .3s ease all;
     &:hover {
       border-color:#26B5A8;
       background-color:#26B5A8;
       color: white;
+    }
+    @media (max-width:600px) {
+      height: 35px;
+      width: 100px;
     }
   `;
 
@@ -163,21 +175,12 @@ export default EditarPerfil;
   `;
 
   const Contenido = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h1 {
-      font-size: 42px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    img {
-      width: 100%;
-      vertical-align: top;
-      border-radius: 3px;
+  text-indent: 10px;
+    @media (max-width:600px) {
+        font-weight: 500;
+        font-size: 12px;
+        text-indent: 10px
     }
   `;
+
+  //<input type="file" className="form-input2" onChange={handleChangeImage("image")}/>

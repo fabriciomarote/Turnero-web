@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Service from '../service/service';
-import Navbar from '../components/Navbar';
 import '../styles/Hospitales.css';
 
 const Hospitales = () => {
@@ -19,9 +18,6 @@ const Hospitales = () => {
 
     return (
         <>
-            <div className="navbar">
-                <Navbar/>
-            </div> 
             <div className="hospitales-container">
                 <div className='hospitales-box'>            
                     {hospitales.map((hospital, idx) => {          

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
-import Navbar from '../components/Navbar';
 import Service from '../service/service';
 import HospitalModel from './HospitalModel';
 import '../styles/Search.css';
@@ -26,9 +25,6 @@ const Search = () => {
 
     return (
         <>
-            <div className="navbar">
-                <Navbar/>
-            </div> 
             <div className="search-container">
                 <div className="content">  
                     <div className="text-result">

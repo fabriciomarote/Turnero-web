@@ -1,7 +1,6 @@
 import React, { useState, useEffect }   from 'react';
 import { useParams } from "react-router-dom";
 import Service from '../service/service';
-import Navbar from '../components/Navbar';
 import EspecialidadModel from './EspecialidadModel';
 import '../styles/Hospital.css';
 
@@ -35,9 +34,6 @@ const Hospital = () => {
 
     return (
         <>
-            <div className="navbar">
-                <Navbar/>
-            </div> 
             <div className="hospital-container">
                 <div className='title-hospital'>
                     {hospital.nombre}, especialidades disponibles:

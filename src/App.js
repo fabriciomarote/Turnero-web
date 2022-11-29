@@ -8,11 +8,15 @@ import Turno from './components/Turno';
 import Profile from './components/Profile';
 import InvalidRoute from './components/InvalidRoute';
 import Hospitales from './components/Hospitales';
+import Navbar from './components/Navbar';
 
 const App = () => {
 
   return (
     <BrowserRouter>
+      <div className="navbar">
+        <Navbar/>
+      </div> 
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route path="/hospital/search" element={<Search/>}/>
